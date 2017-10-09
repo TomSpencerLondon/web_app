@@ -15,7 +15,7 @@ end
 
 get '/cat' do
   #http://bit.ly/1eze8aE
-  '<div>
-  <img src="http://bit.ly/1eze8aE">
-  </div>'
+  "<div>
+  <img src='http://bit.ly/1eze8aE' style='border: 12px dashed red'>
+  </div>"
 end
