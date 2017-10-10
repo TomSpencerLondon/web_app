@@ -19,8 +19,12 @@ get '/random-cat' do
 end
 
 get '/named-cat' do
-  @name = params[:name]
-  @likes = params[:likes]
+
+  p params
+  
+  @name = params[:name] || ""
+  @likes = params[:likes] || ""
+  
   erb(:index)
 end
 

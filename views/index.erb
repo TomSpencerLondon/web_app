@@ -2,3 +2,10 @@
 <img src='http://bit.ly/1eze8aE' style='border: 12px dashed red'>
 </div>
 <h1>My name is <%= @name %> and I like <%= @likes %></h1>
+<% if @name.empty? || @likes.empty? %>
+<form action="/named-cat"> 
+ <label>name: </label> <input type="text" name="name"><br> 
+ <label>likes: </label> <input type="text" name="likes"></br> 
+ <input type="submit" value="Submit"> 
+</form> 
+<% end %>
