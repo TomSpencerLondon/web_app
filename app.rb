@@ -13,9 +13,15 @@ get '/noob' do
   'nooby-dooby-do'
 end
 
-get '/cat' do
+get '/random-cat' do
   @name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index) + erb(:aram)
+end
+
+get '/named-cat' do
+  @name = params[:name]
+  @likes = params[:likes]
+  erb(:index)
 end
 
 get '/aram' do
