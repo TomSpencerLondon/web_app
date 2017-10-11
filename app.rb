@@ -16,19 +16,14 @@ end
 get '/random-cat' do
   @likes =""
   @name = ["Amigo", "Oscar", "Viking"].sample
-  erb(:index) 
-end
-
-post '/named-cat' do
-
-  p params
-  
-  @name = params[:name] || ""
- 
-  
   erb(:index)
 end
 
-get "/form" do
-  erb(:form)
+get "/cat-form" do
+  erb(:cat_form)
+end
+
+post '/named-cat' do
+  @name = params[:name] || ""
+  erb(:index)
 end
